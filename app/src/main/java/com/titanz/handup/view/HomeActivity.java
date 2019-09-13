@@ -63,25 +63,25 @@ public class HomeActivity extends AppCompatActivity {
         quote1.setCod(0004);
         quotesList.add(quote4);
 
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
+        Quote quote5 = new Quote();
+        quote1.setNome("CIEL3");
         quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
+        quote1.setValor(7);
+        quote1.setCod(0005);
+        quotesList.add(quote5);
+
+        Quote quote6 = new Quote();
+        quote1.setNome("ABV3");
+        quote1.setOscilacao(-2);
+        quote1.setValor(19);
+        quote1.setCod(0006);
         quotesList.add(quote1);
 
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
-        quotesList.add(quote1);
-
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
+        Quote quote7 = new Quote();
+        quote1.setNome("SANB11");
+        quote1.setOscilacao(-4);
+        quote1.setValor(45);
+        quote1.setCod(0007);
         quotesList.add(quote1);
 
         Quote quote1 = new Quote();
