@@ -1,9 +1,11 @@
 package com.titanz.handup.view;
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
 import com.titanz.handup.R;
 import com.titanz.handup.adapter.QuotesAdapter;
 import com.titanz.handup.model.Quote;
@@ -15,13 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private QuotesAdapter quotesAdapter;
     private RecyclerView quoteRecyclerView;
 
 
@@ -137,12 +139,35 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+           //     exibirDialogRegister();
             }
         });
     }
 
+ //  private void exibirDialogRegister() {
+
+ //      final Dialog dialog = new Dialog(getApplicationContext());
+ //      dialog.setContentView(R.layout.novo_quote_dialog);
+ //      dialog.show();
+
+ //      Button registrarDialog = dialog.findViewById(R.id.registrar_button_id);
+
+ //      registrarDialog.setOnClickListener(new View.OnClickListener() {
+ //          @Override
+ //          public void onClick(View view) {
+
+ //              TextInputEditText nomeEditText = dialog.findViewById(R.id.registrar_nome_Edit_Text_id);
+
+ //              TextInputEditText oscilacaoEditText = dialog.findViewById(R.id.registrar_oscilacao_Edit_Text_id);
+
+ //              TextInputEditText valorEditText = dialog.findViewById(R.id.registrar_valor_Edit_Text_id);
+
+ //          }
+ //      });
+
+
+ //  }
 
 
     private void changeStatusBarColor() {
