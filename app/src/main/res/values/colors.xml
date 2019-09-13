@@ -8,5 +8,6 @@
     <color name="primaryBlue">#00b0ff</color>
     <color name="lightBlue">#69e2ff</color>
     <color name="darkBlue">#0081cb</color>
+    <color name="white">#FFFFFF</color>
 
 </resources>
