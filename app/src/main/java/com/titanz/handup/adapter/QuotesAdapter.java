@@ -41,7 +41,8 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+
+        return quoteList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

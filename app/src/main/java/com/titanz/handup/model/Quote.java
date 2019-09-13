@@ -3,9 +3,9 @@ package com.titanz.handup.model;
 public class Quote {
 
     private String nome;
-    private int cod;
-    private int valor;
-    private int oscilacao;
+    private String cod;
+    private String valor;
+    private String oscilacao;
 
     public String getNome() {
         return nome;
@@ -15,27 +15,27 @@ public class Quote {
         this.nome = nome;
     }
 
-    public int getCod() {
+    public String getCod() {
         return cod;
     }
 
-    public void setCod(int cod) {
+    public void setCod(String cod) {
         this.cod = cod;
     }
 
-    public int getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 
-    public int getOscilacao() {
+    public String getOscilacao() {
         return oscilacao;
     }
 
-    public void setOscilacao(int oscilacao) {
+    public void setOscilacao(String oscilacao) {
         this.oscilacao = oscilacao;
     }
 }

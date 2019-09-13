@@ -10,7 +10,6 @@ import com.titanz.handup.model.Quote;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
@@ -32,89 +31,87 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         changeStatusBarColor();
 
+        quotesList = new ArrayList<>();
 
         // Quote Mock
 
         Quote quote1 = new Quote();
         quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
+        quote1.setOscilacao("-1");
+        quote1.setValor("27");
+        quote1.setCod("1");
         quotesList.add(quote1);
 
         Quote quote2 = new Quote();
         quote1.setNome("VALE3");
-        quote1.setOscilacao(-2);
-        quote1.setValor(50);
-        quote1.setCod(0002);
+        quote1.setOscilacao("-2");
+        quote1.setValor("50");
+        quote1.setCod("2");
         quotesList.add(quote2);
 
         Quote quote3 = new Quote();
         quote1.setNome("BBAS3");
-        quote1.setOscilacao(-3);
-        quote1.setValor(49);
-        quote1.setCod(0003);
+        quote1.setOscilacao("-3");
+        quote1.setValor("49");
+        quote1.setCod("3");
         quotesList.add(quote3);
 
         Quote quote4 = new Quote();
         quote1.setNome("ITUB4");
-        quote1.setOscilacao(3);
-        quote1.setValor(36);
-        quote1.setCod(0004);
+        quote1.setOscilacao("3");
+        quote1.setValor("36");
+        quote1.setCod("4");
         quotesList.add(quote4);
 
         Quote quote5 = new Quote();
         quote1.setNome("CIEL3");
-        quote1.setOscilacao(-1);
-        quote1.setValor(7);
-        quote1.setCod(0005);
+        quote1.setOscilacao("-1");
+        quote1.setValor("7");
+        quote1.setCod("5");
         quotesList.add(quote5);
 
         Quote quote6 = new Quote();
         quote1.setNome("ABV3");
-        quote1.setOscilacao(-2);
-        quote1.setValor(19);
-        quote1.setCod(0006);
+        quote1.setOscilacao("-2");
+        quote1.setValor("19");
+        quote1.setCod("6");
         quotesList.add(quote1);
 
         Quote quote7 = new Quote();
         quote1.setNome("SANB11");
-        quote1.setOscilacao(-4);
-        quote1.setValor(45);
-        quote1.setCod(0007);
-        quotesList.add(quote1);
+        quote1.setOscilacao("-4");
+        quote1.setValor("45");
+        quote1.setCod("7");
+        quotesList.add(quote7);
 
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
-        quotesList.add(quote1);
+        Quote quote8 = new Quote();
+        quote1.setNome("LREN3");
+        quote1.setOscilacao("-2");
+        quote1.setValor("53");
+        quote1.setCod("8");
+        quotesList.add(quote8);
 
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
-        quotesList.add(quote1);
+        Quote quote9 = new Quote();
+        quote1.setNome("PCAR4");
+        quote1.setOscilacao("-3");
+        quote1.setValor("87");
+        quote1.setCod("9");
+        quotesList.add(quote9);
 
-        Quote quote1 = new Quote();
-        quote1.setNome("PETR4");
-        quote1.setOscilacao(-1);
-        quote1.setValor(27);
-        quote1.setCod(0001);
-        quotesList.add(quote1);
+        Quote quote10 = new Quote();
+        quote1.setNome("RENT3");
+        quote1.setOscilacao("-6");
+        quote1.setValor("43");
+        quote1.setCod("10");
+        quotesList.add(quote10);
 
-
-
-
-
+        // Setup RecyclerView
         quoteRecyclerView = findViewById(R.id.recycler_quote_view_id);
 
 
         quotesAdapter = new QuotesAdapter(quotesList);
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
 
         quoteRecyclerView.setAdapter(quotesAdapter);
         quoteRecyclerView.setLayoutManager(layoutManager);
