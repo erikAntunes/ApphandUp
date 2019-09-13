@@ -12,12 +12,15 @@ import com.titanz.handup.R;
 import com.titanz.handup.model.Quote;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.ViewHolder> {
 
-    private ArrayList<Quote> quoteList = new ArrayList<>();
+    private List<Quote> quoteList = new ArrayList<>();
 
-    public QuotesAdapter(ArrayList<Quote> quotes){ this.quoteList = quotes;}
+    public QuotesAdapter(List<Quote> quoteList){
+        this.quoteList = quoteList;
+    }
 
 
     @NonNull
@@ -31,11 +34,8 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
 
-        viewHolder.nome.setText(quoteList.get(position).getNome());
-
-        viewHolder.oscilacao.setText(quoteList.get(position).getOscilacao());
-
-        viewHolder.valor.setText(quoteList.get(position).getValor());
+      Quote quote = quoteList.get(position);
+      viewHolder.setupQuote(quote);
 
     }
 
@@ -47,18 +47,23 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nome;
-        TextView oscilacao;
-        TextView valor;
+        private TextView nomeTextView;
+        private TextView oscilacaoTextView;
+        private TextView valorTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nome = itemView.findViewById(R.id.quote_nome_celula_id);
-            oscilacao = itemView.findViewById(R.id.quote_oscilacao_celula_id);
-            valor = itemView.findViewById(R.id.quote_valor_celula_id);
+            nomeTextView = itemView.findViewById(R.id.quote_nome_celula_id);
+            oscilacaoTextView = itemView.findViewById(R.id.quote_oscilacao_celula_id);
+            valorTextView = itemView.findViewById(R.id.quote_valor_celula_id);
 
+        }
+        public void setupQuote (Quote quote){
 
+            nomeTextView.setText(quote.getNome());
+            oscilacaoTextView.setText(quote.getOscilacao());
+            valorTextView.setText(quote.getValor());
         }
     }
 }
