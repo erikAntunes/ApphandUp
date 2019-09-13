@@ -105,6 +105,21 @@ public class HomeActivity extends AppCompatActivity {
         quote10.setCod("10");
         quotesList.add(quote10);
 
+        quotesList.add(quote2);
+        quotesList.add(quote4);
+        quotesList.add(quote5);
+        quotesList.add(quote7);
+        quotesList.add(quote8);
+        quotesList.add(quote1);
+        quotesList.add(quote9);
+        quotesList.add(quote4);
+        quotesList.add(quote3);
+        quotesList.add(quote5);
+        quotesList.add(quote6);
+        quotesList.add(quote2);
+        quotesList.add(quote3);
+        quotesList.add(quote10);
+
         // Setup RecyclerView
 
 
