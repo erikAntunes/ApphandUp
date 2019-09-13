@@ -28,7 +28,7 @@ public class Quote {
     }
 
     public void setValor(String valor) {
-        this.valor = valor;
+        this.valor = "R$ "+valor;
     }
 
     public String getOscilacao() {
@@ -36,6 +36,6 @@ public class Quote {
     }
 
     public void setOscilacao(String oscilacao) {
-        this.oscilacao = oscilacao;
+        this.oscilacao = oscilacao+"%";
     }
 }
