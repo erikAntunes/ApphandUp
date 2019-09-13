@@ -4,13 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="250dp"
+    android:layout_width="165dp"
     android:layout_height="150dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:outlineAmbientShadowColor="@color/darkBlue"
     android:backgroundTint="@color/darkBlue">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
 
         <ImageView
@@ -18,10 +20,9 @@
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:src="@drawable/grafico_mock_png"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/quote_nome_celula_id"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="25dp"
+           />
 
 
         <TextView
@@ -30,31 +31,25 @@
             android:layout_height="30dp"
             android:gravity="center"
             android:text="100"
+            android:layout_marginRight="5dp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="1.0" />
+            android:layout_gravity="bottom|right"
+        />
 
         <TextView
             android:id="@+id/quote_nome_celula_id"
             android:layout_width="70dp"
             android:layout_height="50dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="CIEL3"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.166" />
+            android:textSize="20sp"
+            android:layout_gravity="top|left"
+      />
 
         <TextView
             android:id="@+id/quote_oscilacao_celula_id"
@@ -63,15 +58,11 @@
             android:gravity="center"
             android:text="0"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.571"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quote_nome_celula_id"
-            app:layout_constraintVertical_bias="0.333" />
+            android:layout_gravity="left|top"
+            android:layout_marginTop="115dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>
