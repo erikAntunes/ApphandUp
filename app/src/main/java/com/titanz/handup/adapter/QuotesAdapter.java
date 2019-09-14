@@ -48,20 +48,21 @@ public class QuotesAdapter extends RecyclerView.Adapter<QuotesAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView nomeTextView;
+        private TextView codTextView;
         private TextView oscilacaoTextView;
         private TextView valorTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             nomeTextView = itemView.findViewById(R.id.quote_nome_celula_id);
+            codTextView = itemView.findViewById(R.id.quote_cod_celula_id);
             oscilacaoTextView = itemView.findViewById(R.id.quote_oscilacao_celula_id);
             valorTextView = itemView.findViewById(R.id.quote_valor_celula_id);
 
         }
         public void setupQuote (Quote quote){
-
             nomeTextView.setText(quote.getNome());
+            codTextView.setText(quote.getCod());
             oscilacaoTextView.setText(quote.getOscilacao());
             valorTextView.setText(quote.getValor());
         }
